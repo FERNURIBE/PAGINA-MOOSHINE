@@ -1,0 +1,381 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Barra de Envío Gratuito */
+.free-shipping-bar {
+    background-color: #702635;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+/* Barra de Navegación */
+.navbar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #7a3943;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Logo Centrado */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Menú Desplegable */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0px);
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 100%;
+    z-index: 2000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Crear columnas flexibles */
+    gap: 40px; /* Aumentar el espaciado entre los elementos */
+    justify-content: space-around; /* Espaciado adicional entre los ítems */
+}
+
+/* Elementos del menú */
+.menu-item {
+    text-align: center;
+    margin: 20px; /* Más margen entre los elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #7a3943;
+    margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.menu-item p {
+    margin-top: 10px;
+    color: #7a3943;
+}
+
+/* Mostrar Menú Desplegable al hacer hover */
+.shop-menu:hover .dropdown-menu {
+    display: grid; /* Mantener el grid */
+}
+
+/* Estilos Responsivos */
+
+/* Para pantallas medianas */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        height: 70px;
+    }
+
+    .logo img {
+        max-width: 130px;
+    }
+
+    .dropdown-menu {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajustar columnas */
+        gap: 30px; /* Mantener el espaciado amplio */
+    }
+
+    .menu-item img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .logo img {
+        max-width: 110px;
+    }
+
+    .dropdown-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-item {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    .menu-item img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Para pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .dropdown-menu {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Columnas flexibles y espaciadas */
+        gap: 50px; /* Mayor separación entre elementos en pantallas grandes */
+    }
+
+    .menu-item {
+        margin: 20px; /* Espacio alrededor de cada ítem */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .dropdown-menu {
+        justify-content: space-evenly; /* o space-between */
+    }
+
+    .menu-item {
+        flex-basis: calc(20% - 20px); /* Ajuste según sea necesario */
+    }
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* Espacio entre el carrito y el borde de la pantalla */
+    position: relative;
+    right: 0; /* Asegura que esté alineado a la derecha */
+}
+
+/* Ícono de Carrito */
+.icon-cart {
+    font-size: 24px;
+    cursor: pointer;
+    color: #702635; 
+    transition: color 0.3s ease; 
+}
+
+.icon-cart:hover {
+    color: #a23d4e; 
+}
+
+.cart-modal {
+    position: fixed;
+    right: -300px; /* Comienza fuera de la pantalla */
+    top: 20px;
+    width: 250px;
+    background: #fefefe; /* Fondo blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    padding: 15px;
+    z-index: 1000;
+    border: 1px solid #702635; /* Borde del carrito */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.cart-modal.active {
+    right: 0; /* Muestra el carrito */
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cart-items .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Separador entre items */
+}
+
+.cart-items .cart-item:last-child {
+    border-bottom: none; /* Sin borde en el último item */
+}
+
+.cart-items .remove-item {
+    cursor: pointer;
+    color: #5a1f28; /* Color rojo para eliminar */
+    transition: color 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.cart-items .remove-item:hover {
+    color: #702635; /* Color al pasar el mouse */
+}
+
+#totalPrice {
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #702635; /* Color del texto */
+    margin-top: 20px; /* Espacio superior */
+    text-align: right; /* Alinear a la derecha */
+}
+
+#checkoutBtn {
+    background-color: #702635; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    padding: 10px 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Efecto al pasar el mouse */
+    margin-top: 10px; /* Espacio superior */
+}
+
+#checkoutBtn:hover {
+    background-color: #a23d4e; /* Color al pasar el mouse */
+}
+
+
+
+
+.shop-section {
+    text-align: center;
+    padding: 50px;
+    color: #702635;
+    margin-top: 145px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Sección de filtros con CSS Flexbox */
+.filter-categories {
+    display: flex; /* Usar flexbox para que se alineen en una fila */
+    justify-content: center; /* Centrar los botones */
+    flex-wrap: wrap; /* Permitir que se ajusten en múltiples filas */
+    gap: 15px; /* Espacio entre botones */
+    margin-bottom: 30px;
+    padding: 0 20px; /* Añadir padding lateral */
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 2px solid #702635;
+    color: #702635;
+    padding: 8px 16px; /* Ajustar el padding para que sean más pequeños */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave también para el color */
+    text-align: center; /* Alinear texto al centro */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño para botones */
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #702635;
+    color: #fff;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    width: 250px; /* Mantener el tamaño anterior de los recuadros */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 200px; /* Ancho fijo de las imágenes */
+    height: 250px; /* Alto fijo de las imágenes */
+    object-fit: cover; /* Ajuste de la imagen dentro del contenedor */
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #702635;
+}
+
+.shop-btn {
+    background-color: #702635;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #5a1f28;
+}
+
+/* Media Queries */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .filter-categories {
+        flex-direction: row; /* Mantener en fila */
+        justify-content: center; /* Centrar los botones */
+    }
+
+    .filter-btn {
+        padding: 8px 12px; /* Ajustar el padding para que sean más pequeños */
+        width: 40%; /* Hacer que ocupen el 40% del ancho */
+        max-width: 150px; /* Limitar el ancho máximo de los botones */
+    }
+}
+
+/* Para pantallas medianas y grandes */
+@media (min-width: 769px) {
+    .filter-categories {
+        flex-direction: row; /* Alinear en fila para pantallas grandes */
+    }
+}

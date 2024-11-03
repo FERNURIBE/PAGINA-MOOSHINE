@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Shop</title>
+    <link rel="stylesheet" href="css/styles-sections.min.css">
+</head>
+<body>
+
+     <!-- Barra de Envío Gratuito -->
+<div class="free-shipping-bar">¡Envío gratis a todo Colombia!</div>
+
+<!-- Barra de Navegación -->
+<nav class="navbar">
+    <ul class="nav-menu">
+        <li class="shop-menu">
+            <a href="#" id="shopLink">Shop</a>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <div class="menu-item">
+                    <a href="Makeup.html">
+                        <img src="/imagenes/makeup.webp" loading="lazy" alt="Maquillaje">
+                        <p>Maquillaje</p>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="Skincare.html">
+                        <img src="/imagenes/skincare.webp" loading="lazy" alt="Cuidado Facial">
+                        <p>Cuidado Facial</p>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="Cuidadopiel.html">
+                        <img src="/imagenes/Piel.webp" loading="lazy" alt="Cuidado de Piel">
+                        <p>Cuidado de Piel</p>
+                    </a>
+                </div>
+                
+            </div>
+        </li>
+    </ul>
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="/imagenes/LOGO.webp" loading="lazy" alt="Logo">
+        </a>
+    </div>
+
+    <div class="cart">
+        <span class="icon-cart">🛒</span>
+    </div>
+</nav>
+
+  <!-- Carrito -->
+  <div class="cart-modal" id="cartModal">
+    <h2>Tu Carrito</h2>
+    <div class="cart-items" id="cartItems"></div>
+    <p id="totalPrice">Total: $0</p>
+    <button id="checkoutBtn">Comprar</button>
+</div>
+
+    <section class="shop-section">
+        <h1>Explore all products</h1>
+        
+        <!-- Filter Categories -->
+        <div class="filter-categories">
+            <button class="filter-btn active" data-category="all">Shop all</button>
+            <button class="filter-btn" data-category="limpieza">Limpieza</button>
+            <button class="filter-btn" data-category="cuidado">Cuidado</button>
+            <button class="filter-btn" data-category="hidratación">Hidratación</button>
+        </div>
+
+        <!-- Products Section -->
+        <div class="product-grid">
+            
+            <div class="product-card" data-category="limpieza">
+                <img src="/imagenes/jabon facial.webp" loading="lazy" alt="limpieza Product">
+                <h3>Jabon limpiador </h3>
+                <p>$20.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="cuidado">
+                <img src="/imagenes/bloqueador.webp" loading="lazy" alt="cuidado Product">
+                <h3>Bloqueador Solar </h3>
+                <p>$45.000</p>
+                <button class="shop-btn" data-id="11">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="limpieza">
+                <img src="/imagenes/Gel limpiador.webp" loading="lazy" alt="limpieza Product">
+                <h3>Gel limpiador </h3>
+                <p>$18.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="hidratación">
+                <img src="/imagenes/Crema facial.webp" loading="lazy" alt="hidratacion Product">
+                <h3>Crema Facial Hidratante </h3>
+                <p>$30.000</p>
+                <button class="shop-btn" data-id="12">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="hidratación">
+                <img src="/imagenes/Hidratante labios.webp" loading="lazy" alt="hidratacion Product">
+                <h3>Hidratante para Labios </h3>
+                <p>$20.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            
+            <div class="product-card" data-category="cuidado">
+                <img src="/imagenes/Aceite facial.webp" loading="lazy" alt="cuidado Product">
+                <h3>Aceite Facial </h3>
+                <p>$40.000</p>
+                <button class="shop-btn" data-id="13">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="cuidado">
+                <img src="/imagenes/mascarilla.webp" loading="lazy" alt="cuidado Product">
+                <h3>Mascarilla de Rosas </h3>
+                <p>$20.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="hidratación">
+                <img src="/imagenes/Tonico rosas.webp" loading="lazy" alt="hidratacion Product">
+                <h3>Tónico de Rosas </h3>
+                <p>$18.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <script src="js/script-sections.js"></script>
+</body>
+</html>

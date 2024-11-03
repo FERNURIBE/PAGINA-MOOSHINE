@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Shop</title>
+    <link rel="stylesheet" href="css/styles-sections.min.css">
+</head>
+<body>
+
+     <!-- Barra de Envío Gratuito -->
+<div class="free-shipping-bar">¡Envío gratis a todo Colombia!</div>
+
+<!-- Barra de Navegación -->
+<nav class="navbar">
+    <ul class="nav-menu">
+        <li class="shop-menu">
+            <a href="#" id="shopLink">Shop</a>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <div class="menu-item">
+                    <a href="Makeup.html">
+                        <img src="/imagenes/makeup.webp" loading="lazy" alt="Maquillaje">
+                        <p>Maquillaje</p>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="Skincare.html">
+                        <img src="/imagenes/skincare.webp" loading="lazy" alt="Cuidado Facial">
+                        <p>Cuidado Facial</p>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="Cuidadopiel.html">
+                        <img src="/imagenes/Piel.webp" loading="lazy" alt="Cuidado de Piel">
+                        <p>Cuidado de Piel</p>
+                    </a>
+                </div>
+               
+            </div>
+        </li>
+    </ul>
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="/imagenes/LOGO.webp" loading="lazy" alt="Logo">
+        </a>
+    </div>
+
+    <div class="cart">
+        <span class="icon-cart">🛒</span>
+    </div>
+</nav>
+
+ <!-- Carrito -->
+ <div class="cart-modal" id="cartModal">
+    <h2>Tu Carrito</h2>
+    <div class="cart-items" id="cartItems"></div>
+    <p id="totalPrice">Total: $0</p>
+    <button id="checkoutBtn">Comprar</button>
+</div>
+
+    <section class="shop-section">
+        <h1>Explore all products</h1>
+        
+        <!-- Filter Categories -->
+        <div class="filter-categories">
+            <button class="filter-btn active" data-category="all">Shop all</button>
+            <button class="filter-btn" data-category="face">Face</button>
+            <button class="filter-btn" data-category="lip">Lip</button>
+            <button class="filter-btn" data-category="eye">Eye</button>
+            <button class="filter-btn" data-category="tools">Tools</button>
+        </div>
+
+        <!-- Products Section -->
+        <div class="product-grid">
+            
+            <div class="product-card" data-category="face">
+                <img src="/imagenes/Base.webp" loading="lazy" alt="Face Product">
+                <h3>Base </h3>
+                <p>$25.000</p>
+                <button class="shop-btn" data-id="1">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="face">
+                <img src="/imagenes/concealer.webp" loading="lazy" alt="Face Product">
+                <h3> Corrector</h3>
+                <p>$18.000</p>
+                <button class="shop-btn" data-id="2">Shop Now</button>
+            </div>
+          
+            <div class="product-card" data-category="face">
+                <img src="/imagenes/polvotraslucido.webp" loading="lazy" alt="Face Product">
+                <h3> Polvo traslucido</h3>
+                <p>$20.000</p>
+                <button class="shop-btn" data-id="3">Shop Now</button>
+            </div>
+
+            
+            <div class="product-card" data-category="face">
+                <img src="/imagenes/polvocompacto.webp" loading="lazy" alt="Face Product">
+                <h3> Polvo compacto</h3>
+                <p>$22.000</p>
+                <button class="shop-btn" data-id="4">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="face">
+                <img src="/imagenes/blush.webp" loading="lazy" alt="Face Product">
+                <h3> Rubor </h3>
+                <p>$16.000</p>
+                <button class="shop-btn" data-id="5">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="face">
+                <img src="/imagenes/iluminador.webp" loading="lazy" alt="Face Product">
+                <h3> Iluminador </h3>
+                <p>$16.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="face">
+                <img src="/imagenes/Bronzer.webp" loading="lazy" alt="Face Product">
+                <h3> Bronzer </h3>
+                <p>$20.000</p>
+                <button class="shop-btn"></button>>Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="lip">
+                <img src="/imagenes/lip gloss.webp" loading="lazy" alt="Lip Gloss">
+                <h3>Lip Gloss</h3>
+                <p>$15.000</p>
+                <button class="shop-btn" data-id="6">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="lip">
+                <img src="/imagenes/Lip shine.webp" loading="lazy" alt="Lip Gloss">
+                <h3>Lip Shine</h3>
+                <p>$18.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="lip">
+                <img src="/imagenes/Lip stick.webp" loading="lazy" alt="Lip Gloss">
+                <h3>Lipstick Barra</h3>
+                <p>$16.000</p>
+                <button class="shop-btn" data-id="7">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="lip">
+                <img src="/imagenes/Lip-stick-liquido.webp" loading="lazy" alt="Lip Gloss">
+                <h3>Lipstick Líquido</h3>
+                <p>$18.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="eye">
+                <img src="/imagenes/Mascara Volumen.webp" loading="lazy" alt="Eye Makeup">
+                <h3>Volumizing mascara</h3>
+                <p>$25.000</p>
+                <button class="shop-btn" data-id="8">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="eye">
+                <img src="/imagenes/Mascara definicion.webp" loading="lazy" alt="Eye Makeup">
+                <h3>Defining mascara</h3>
+                <p>$25.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+            
+            <div class="product-card" data-category="eye">
+                <img src="/imagenes/Paleta sombras.webp" loading="lazy" alt="Eye Makeup">
+                <h3>Paleta sombras</h3>
+                <p>$35.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="eye">
+                <img src="/imagenes/Sunset glow.webp" loading="lazy" alt="Eye Makeup">
+                <h3> Paleta Sunset Glow</h3>
+                <p>$25.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="eye">
+                <img src="/imagenes/Golden glow.webp" loading="lazy" alt="Eye Makeup">
+                <h3> Paleta Golden Glow</h3>
+                <p>$25.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="eye">
+                <img src="/imagenes/eyeliner marron.webp" loading="lazy" alt="Eye Makeup">
+                <h3> Eyeliner Marron</h3>
+                <p>$10.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="eye">
+                <img src="/imagenes/Delineador.webp" loading="lazy" alt="Eye Makeup">
+                <h3> Delineador en Plumon Negro</h3>
+                <p>$12.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="tools">
+                <img src="/imagenes/Brocha 10.webp" loading="lazy" alt="tools Makeup">
+                <h3> Brocha Blush #10 data-id="9" </h3>
+                <p>$12.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="tools">
+                <img src="/imagenes/Brocha 17.webp" loading="lazy" alt="tools Makeup">
+                <h3> Brocha Eyeliner #17 </h3>
+                <p>$8.000</p>
+                <button class="shop-btn" data-id="10">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="tools">
+                <img src="/imagenes/Brocha 5.webp" loading="lazy"alt="tools Makeup">
+                <h3> Brocha concealer #5 </h3>
+                <p>$6.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="tools">
+                <img src="/imagenes/Brocha 2.webp" loading="lazy" alt="tools Makeup">
+                <h3> Brocha  #2 </h3>
+                <p>$10.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            <div class="product-card" data-category="tools">
+                <img src="/imagenes/Encrespador.webp" loading="lazy" alt="tools Makeup">
+                <h3> Encrespador de pestañas </h3>
+                <p>$12.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+            
+            <div class="product-card" data-category="tools">
+                <img src="/imagenes/Borlas.webp" loading="lazy" alt="tools Makeup">
+                <h3> Borlas 3pz </h3>
+                <p>$10.000</p>
+                <button class="shop-btn">Shop Now</button>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <script src="js/script-sections.js"></script>
+</body>
+</html>
